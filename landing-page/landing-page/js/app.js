@@ -1,15 +1,10 @@
 //declare global variables
 const bar =document.getElementById("nav");
-//
-
-//
-
-
-
+const sections = document.querySelectorAll(".landing__container");
 
 //declare functions.
 function createNavigationBar(){
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < sections.length; i++) {
         const navBotton = document.createElement("li");
         navBotton.textContent = "section " +(i+1);
         navBotton.className="navButton";
@@ -19,10 +14,6 @@ function createNavigationBar(){
 
             document.getElementById("section" +(i+1)).scrollIntoView({behavior:"smooth"});
         });
-
-
-
-
 
         bar.append(navBotton);
       }
